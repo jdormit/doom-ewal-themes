@@ -59,7 +59,7 @@ determine the exact padding."
 
    ;; face categories -- required for all themes
    (highlight      blue)
-   (vertical-bar   (doom-darken base1 0.1))
+   (vertical-bar   (doom-lighten base1 0.2))
    (selection      dark-blue)
    (builtin        magenta)
    (comments       (if ewal-doom-one-brighter-comments dark-cyan base5))
@@ -167,7 +167,7 @@ determine the exact padding."
    ((markdown-code-face &override) :background (doom-lighten base3 0.05))
 
    ;; ivy-mode
-   (ivy-current-match :background (doom-lighten yellow 0.65) :distant-foreground fg)
+   (ivy-current-match :background (doom-lighten bg 0.3))
    (ivy-minibuffer-match-face-1 :foreground blue :background base3 :weight 'bold)
    (ivy-minibuffer-match-face-2 :foreground magenta :background base3 :weight 'bold)
    (ivy-minibuffer-match-face-3 :foreground green   :background base3 :weight 'bold)
