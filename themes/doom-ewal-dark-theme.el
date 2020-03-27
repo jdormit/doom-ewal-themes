@@ -1,4 +1,4 @@
-(require 'ewal-doom-themes)
+(require 'doom-ewal-theme)
 
 (defgroup doom-ewal-dark-theme nil
   "Options for doom-themes"
