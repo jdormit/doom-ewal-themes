@@ -26,6 +26,8 @@ determine the exact padding."
   :group 'doom-ewal-dark-theme
   :type '(choice integer boolean))
 
+(ewal-load-colors)
+
 (def-doom-theme doom-ewal-dark
   "A theme that pulls colors from the Pywal cache via ewal.el"
 
