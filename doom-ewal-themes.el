@@ -1,4 +1,4 @@
-;;; doom-ewal-theme.el --- Doom themes that read from the Pywal cache  -*- lexical-binding: t; -*-
+;;; doom-ewal-themes.el --- Doom themes that read from the Pywal cache  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020
 
@@ -35,6 +35,6 @@ deals with tty contexts."
          (dir (expand-file-name "themes/" base)))
     (add-to-list 'custom-theme-load-path dir)))
 
-(provide 'doom-ewal-theme)
+(provide 'doom-ewal-themes)
 
-;;; doom-ewal-theme.el ends here
+;;; doom-ewal-themes.el ends here
