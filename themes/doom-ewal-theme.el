@@ -110,7 +110,7 @@ determine the exact padding."
 
    (hl-line :background base3)
 
-   ((line-number &override) :foreground fg-alt)
+   ((line-number &override) :foreground comments)
    ((line-number-current-line &override) :foreground fg :background region :weight 'bold)
 
    (org-block :background (doom-blend yellow bg 0.04))
