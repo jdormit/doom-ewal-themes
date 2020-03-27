@@ -110,7 +110,7 @@ determine the exact padding."
 
    (hl-line :background base3)
 
-   ((line-number &override) :foreground base6)
+   ((line-number &override) :foreground fg-alt)
    ((line-number-current-line &override) :foreground fg :background region :weight 'bold)
 
    (org-block :background (doom-blend yellow bg 0.04))
@@ -169,7 +169,7 @@ determine the exact padding."
    ((markdown-code-face &override) :background (doom-lighten base3 0.05))
 
    ;; ivy-mode
-   (ivy-current-match :background (doom-lighten bg 0.3))
+   (ivy-current-match :background modeline-bg)
    (ivy-minibuffer-match-face-1 :foreground blue :background base3 :weight 'bold)
    (ivy-minibuffer-match-face-2 :foreground magenta :background base3 :weight 'bold)
    (ivy-minibuffer-match-face-3 :foreground green   :background base3 :weight 'bold)
