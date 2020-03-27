@@ -1,4 +1,12 @@
-(require 'doom-ewal-themes)
+(require 'ewal)
+(require 'doom-themes)
+
+(defun ewal-doom-themes-get-color (color &optional shade shade-percent-difference)
+  "Return COLOR of SHADE with SHADE-PERCENT-DIFFERENCE repeated 3
+times.  This fits `def-doom-theme' and works because `ewal'
+automatically deals with tty contexts."
+  (let ((color (ewal-get-color color shade shade-percent-difference)))
+    `(,color ,color ,color)))
 
 (defgroup doom-ewal-dark-theme nil
   "Options for doom-themes"
