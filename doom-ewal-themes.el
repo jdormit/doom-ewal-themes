@@ -3,6 +3,7 @@
 ;; Copyright (C) 2020
 
 ;; Author:  Jeremy Dormitzer <jeremy.dormitzer@gmail.com>
+;; Version: 1.0
 ;; Package-Requires: ((emacs "25") (ewal "0.1") (doom-themes "0.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
