@@ -1,34 +1,34 @@
 (require 'doom-ewal-themes)
 
-(defgroup doom-ewal-dark-theme nil
+(defgroup doom-ewal-theme nil
   "Options for doom-themes"
   :group 'doom-themes)
 
-(defcustom doom-ewal-dark-brighter-modeline nil
+(defcustom doom-ewal-brighter-modeline nil
   "If non-nil, more vivid colors will be used to style the mode-line."
-  :group 'doom-ewal-dark-theme
+  :group 'doom-ewal-theme
   :type 'boolean)
 
-(defcustom doom-ewal-dark-brighter-comments nil
+(defcustom doom-ewal-brighter-comments nil
   "If non-nil, comments will be highlighted in more vivid colors."
-  :group 'doom-ewal-dark-theme
+  :group 'doom-ewal-theme
   :type 'boolean)
 
-(defcustom doom-ewal-dark-comment-bg doom-ewal-dark-brighter-comments
+(defcustom doom-ewal-comment-bg doom-ewal-brighter-comments
   "If non-nil, comments will have a subtle, darker background. Enhancing their
 legibility."
-  :group 'doom-ewal-dark-theme
+  :group 'doom-ewal-theme
   :type 'boolean)
 
-(defcustom doom-ewal-dark-padded-modeline doom-themes-padded-modeline
+(defcustom doom-ewal-padded-modeline doom-themes-padded-modeline
   "If non-nil, adds a 4px padding to the mode-line. Can be an integer to
 determine the exact padding."
-  :group 'doom-ewal-dark-theme
+  :group 'doom-ewal-theme
   :type '(choice integer boolean))
 
 (ewal-load-colors)
 
-(def-doom-theme doom-ewal-dark
+(def-doom-theme doom-ewal
   "A theme that pulls colors from the Pywal cache via ewal.el"
 
   ;; name        default   256       16
@@ -64,8 +64,8 @@ determine the exact padding."
    (vertical-bar   (doom-lighten base1 0.2))
    (selection      dark-blue)
    (builtin        magenta)
-   (comments       (if doom-ewal-dark-brighter-comments dark-cyan base5))
-   (doc-comments   (doom-lighten (if doom-ewal-dark-brighter-comments dark-cyan base5) 0.25))
+   (comments       (if doom-ewal-brighter-comments dark-cyan base5))
+   (doc-comments   (doom-lighten (if doom-ewal-brighter-comments dark-cyan base5) 0.25))
    (constants      violet)
    (functions      magenta)
    (keywords       blue)
@@ -85,10 +85,10 @@ determine the exact padding."
 
    ;; custom categories
    (hidden     `(,(car bg) "black" "black"))
-   (-modeline-bright doom-ewal-dark-brighter-modeline)
+   (-modeline-bright doom-ewal-brighter-modeline)
    (-modeline-pad
-    (when doom-ewal-dark-padded-modeline
-      (if (integerp doom-ewal-dark-padded-modeline) doom-ewal-dark-padded-modeline 4)))
+    (when doom-ewal-padded-modeline
+      (if (integerp doom-ewal-padded-modeline) doom-ewal-padded-modeline 4)))
 
    (modeline-fg     nil)
    (modeline-fg-alt base6)
@@ -122,7 +122,7 @@ determine the exact padding."
    (font-lock-comment-face
     :slant 'italic
     :foreground comments
-    :background (if doom-ewal-dark-comment-bg (doom-blend teal base0 0.07)))
+    :background (if doom-ewal-comment-bg (doom-blend teal base0 0.07)))
    ((font-lock-doc-face &override) :foreground doc-comments)
    ((font-lock-type-face &override) :slant 'italic)
    ((font-lock-builtin-face &override) :slant 'italic)
@@ -207,4 +207,4 @@ determine the exact padding."
   ;; ()
   )
 
-;; doom-ewal-dark-theme.el ends here
+;; doom-ewal-theme.el ends here
